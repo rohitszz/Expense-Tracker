@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <style>
+        .checkout.active{
+            display: none;
+        }
+        .checkout{
+            display: flex;
+            height: 23px;
+            width: 65px;
+            font-size: 12px;
+            background-color:rgb(31, 117, 18);
+            border-radius:4px ;
+            border: 1px solid rgba(24, 20, 20, 0.635);
+        }
+        .list{
+            margin-top:10px;
+            margin-bottom: 10px;
+            font-size: 13.4px;
+        }
+        .checkout:hover{
+            background-color:rgba(31, 117, 18, 0.616);
+          
+        }
+        .bag{
+            padding:15px ;
+            color: rgb(255, 255, 255);
+            background-color: rgba(128, 128, 128, 0.158);
+            width: 330px;
+            border-radius: 12px;
+        }
+        .contain{
+            background-color: black;
+            width: 100vw;
+            height: 100vh;
+        }
+        .p1,.p2,.p3{
+            font-size: 14px;
+            background-color: rgba(128, 128, 128, 0.169);
+            height: 45px;
+            border-radius:5px ;
+        }
+        .items{
+            margin-top: 1rem; 
+        }
+        .cart{
+            background-color: rgb(120, 11, 253);
+            border-radius: 4px;
+            height: 23px;
+            width: 65px;
+            font-size:10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: random;
+            
+        }
+        .cart:hover{
+              background-color: rgba(120, 11, 253, 0.621);
+              border:1px solid rgba(255, 255, 255, 0.5);
+        }
+        .itemschild{
+            padding-left: 9px ;
+            padding-right: 7px ;
+        }
+        .shoppingcart{
+            margin-top:1rem; 
+          
+        }
+        .checkdiv{
+            margin-bottom: 1px;
+        }
+        .totaldiv.active{
+            display: none;
+        }
+        .totaldiv{
+            display: flex;
+            height: 30px;
+            width: 50px;
+            font-size: 13px;
+            border-radius: 0.2rem;
+            margin-top:0.3rem ;
+            margin-bottom: 0.5rem;
+            margin-right: 0.4rem;
+        }
+        .input{
+            padding-left:0.6rem; 
+            color: white;
+            font-size: 10px;
+            width: 200px;
+            border: 1px solid rgba(255, 255, 255, 0.368) ;
+        }
+        .topdiv{
+            margin-bottom: 0.2rem;
+            gap: 0px 55px;
+            margin-top: -0.1rem;
+        }
+        .enter{
+            height: 16px;
+            width: 45px;
+            border: 1px solid rgba(255, 255, 255, 0.877);
+            font-size: 9px;
+            border-radius: 4rem;
+            transform: translateX(-1.15rem);
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="contain bg-black flex justify-center items-center">
+
+        <div class="bag ">
+
+            <div class=" text-3xl font-semibold">Products</div>
+
+        
+
+            <div class="items flex flex-col gap-y-2">
+
+
+                <div class="topdiv flex flex-row justify-center items-center ">
+                    <input class="input h-5 w-full rounded-2xl " placeholder="enter product amount" data-input></input>
+                    <button class="enter flex justify-center items-center" data-enter>enter</button>
+                </div>
+
+                <div class="itemschild flex flex-row justify-between items-center p1">
+                    <div class="" data-product>Product 1-$29.99</div>
+                    <button class="cart" data-cart>Add to Cart</button>
+                </div>
+
+                <div class="itemschild flex flex-row justify-between items-center p2">
+                    <div class="" data-product>Product 2-$19.99</div>
+                    <button class="cart" data-cart>Add to Cart</button>
+                </div>
+
+                <div class=" itemschild flex flex-row justify-between items-center p3">
+                    <div class="" data-product>Product 3-$49.99</div>
+                    <button class="cart" data-cart>Add to Cart</button>
+                </div>
+
+            </div>
+
+            <div class="text-2xl shoppingcart font-semibold">Shopping Cart</div>
+
+            <div class="list " data-product-list></div>
+
+            <div class="checkdiv flex flex-col items-end justify-center">
+                <div class="totaldiv text-white flex items-center justify-center" data-total>total</div>
+                <button class="checkout flex items-center justify-center " data-Checkout>Checkout</button>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <script src="ExpenseTracker.js"></script>
+</body>
+</html>
